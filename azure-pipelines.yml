@@ -50,3 +50,9 @@ steps:
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
 
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: '8c58ada1-2ac4-42ec-93c6-c0d336a1b629'
+    appName: 'learndevopsSL'
+    package: $(System.DefaultWorkingDirectory)/**/*.zip  
+
